@@ -1,0 +1,11 @@
+- name: Demo ansible.cfg bug
+  hosts: localhost
+  connection: local
+  become: no
+
+  tasks:
+    - name: Create a file using setting in ansible.cfg
+      template:
+        src: template.j2
+        dest: /tmp/template.txt
+
